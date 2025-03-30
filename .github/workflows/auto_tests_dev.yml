@@ -14,5 +14,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Setup packages
+        run: bash .github/scripts/setup_packages.sh
+
       - name: Install vcpkg
         run: bash .github/scripts/setup_vcpkg.sh

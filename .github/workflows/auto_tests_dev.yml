@@ -1,6 +1,7 @@
 name: Auto test on dev
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - dev

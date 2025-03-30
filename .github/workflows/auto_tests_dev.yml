@@ -1,0 +1,18 @@
+name: Auto test on dev
+
+on:
+  push:
+    branches:
+      - dev
+      - dev/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install vcpkg
+        run: bash .github/scripts/setup_vcpkg.sh
